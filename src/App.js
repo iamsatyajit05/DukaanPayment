@@ -1,7 +1,18 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './component/Layout';
+import Sidebar from './component/Sidebar';
+import PaymentPage from './pages/Payment';
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      LFG!
-    </h1>
+    <Router>
+      <main className='flex h-screen'>
+        <Sidebar />
+        <Routes>
+          <Route path="/payments" element={<PaymentPage />} />
+        </Routes>
+      </main>
+    </Router>
   )
 }
