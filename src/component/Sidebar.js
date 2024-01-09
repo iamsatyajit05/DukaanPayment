@@ -69,8 +69,10 @@ export default function Sidebar() {
     const location = useLocation();
     const { pathname } = location;
 
+    document.title = `Dukaan - ${pathname.slice(1).charAt(0).toUpperCase() + pathname.slice(2)}`;
+
     return (
-        <nav className="w-56 bg-[#1E2640]">
+        <nav className="w-56 h-screen bg-[#1E2640] sticky top-0 overflow-auto">
             <div className="h-full flex flex-col px-[10px] py-[16px] space-y-4">
                 <div className="flex-1 space-y-6">
                     <div className='w-48 h-[42px] flex items-center space-x-3'>
