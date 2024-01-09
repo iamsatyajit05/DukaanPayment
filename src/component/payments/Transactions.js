@@ -1,5 +1,5 @@
 import React from 'react';
-import { SearchIcon, SortIcon, DownloadIcon, DropdownIcon, HeaderIcon2 } from '../../assets/Icons';
+import { SearchIcon, SortIcon, DownloadIcon, DropdownIcon, HeaderIcon2, InformationIcon } from '../../assets/Icons';
 
 export default function Overview() {
     const transactions = Array.from({ length: 20 }, () => [
@@ -21,7 +21,9 @@ export default function Overview() {
             <div>
                 <span className='text-xl font-medium'>Transactions | This Month</span>
             </div>
-            <div className='bg-white shadow-md rounded-lg p-3 pb-6 space-y-6'>
+            <div className='bg-white rounded-lg p-3 pb-6 space-y-6' style={{
+                boxShadow: '0 2px 6px 0 rgba(26,24,30,0.04)'
+            }}>
                 <div className='space-y-3'>
                     <div className='flex justify-between'>
                         <div className='w-[248px]'>
@@ -59,7 +61,10 @@ export default function Overview() {
                                         Order amount
                                     </th>
                                     <th scope="col" className="rounded-r bg-[#F2F2F2] w-1/4 text-right text-sm font-medium py-[10px] pr-3">
-                                        Transaction fees
+                                        <div className='flex justify-end items-center gap-1 cursor-pointer gap-1'>
+                                            Transaction fees
+                                            <InformationIcon width={14} height={14} fillColor={'#4D4D4D'} />
+                                        </div>
                                     </th>
                                 </tr>
                             </thead>
@@ -67,10 +72,10 @@ export default function Overview() {
                                 {transactions.map((transaction) => (
                                     <tr
                                         key={transaction.id}
-                                        className="h-10 border-b-[1px] border-b-[#E6E6E6]"
+                                        className="h-10 border-b-[1px] border-b-[#E6E6E6] hover:bg-gray-50"
                                     >
                                         <td className="text-sm font-medium text-[#146EB4] py-[14px] pl-3">
-                                            #{transaction.id}
+                                            <a href="/">#{transaction.id}</a>
                                         </td>
                                         <td className="text-sm py-[14px]">
                                             {transaction.date}
@@ -97,37 +102,37 @@ export default function Overview() {
                         </button>
                         <div className='flex gap-2'>
                             <button className='w-7 h-7 py-[2px] flex justify-center items-center'>
-                                <span className='text-[#4D4D4D]'>1</span>
+                                <span className='text-[#4D4D4D] text-sm font-medium'>1</span>
                             </button>
                             <button className='w-7 h-7 py-[2px] flex justify-center items-center'>
-                                <span className='text-[#4D4D4D]'>...</span>
+                                <span className='text-[#4D4D4D] text-sm font-medium'>...</span>
                             </button>
                             <button className='w-7 h-7 py-[2px] flex justify-center items-center rounded bg-[#146EB4]'>
-                                <span className='text-white'>10</span>
+                                <span className='text-white text-sm font-medium'>10</span>
                             </button>
                             <button className='w-7 h-7 py-[2px] flex justify-center items-center'>
-                                <span className='text-[#4D4D4D]'>11</span>
+                                <span className='text-[#4D4D4D] text-sm font-medium'>11</span>
                             </button>
                             <button className='w-7 h-7 py-[2px] flex justify-center items-center'>
-                                <span className='text-[#4D4D4D]'>12</span>
+                                <span className='text-[#4D4D4D] text-sm font-medium'>12</span>
                             </button>
                             <button className='w-7 h-7 py-[2px] flex justify-center items-center'>
-                                <span className='text-[#4D4D4D]'>13</span>
+                                <span className='text-[#4D4D4D] text-sm font-medium'>13</span>
                             </button>
                             <button className='w-7 h-7 py-[2px] flex justify-center items-center'>
-                                <span className='text-[#4D4D4D]'>14</span>
+                                <span className='text-[#4D4D4D] text-sm font-medium'>14</span>
                             </button>
                             <button className='w-7 h-7 py-[2px] flex justify-center items-center'>
-                                <span className='text-[#4D4D4D]'>15</span>
+                                <span className='text-[#4D4D4D] text-sm font-medium'>15</span>
                             </button>
                             <button className='w-7 h-7 py-[2px] flex justify-center items-center'>
-                                <span className='text-[#4D4D4D]'>16</span>
+                                <span className='text-[#4D4D4D] text-sm font-medium'>16</span>
                             </button>
                             <button className='w-7 h-7 py-[2px] flex justify-center items-center'>
-                                <span className='text-[#4D4D4D]'>17</span>
+                                <span className='text-[#4D4D4D] text-sm font-medium'>17</span>
                             </button>
                             <button className='w-7 h-7 py-[2px] flex justify-center items-center'>
-                                <span className='text-[#4D4D4D]'>18</span>
+                                <span className='text-[#4D4D4D] text-sm font-medium'>18</span>
                             </button>
                         </div>
                         <button className='p-[6px] pl-3  h-9 flex justify-center items-center gap-[6px] rounded bg-white border border-[#D9D9D9]'>

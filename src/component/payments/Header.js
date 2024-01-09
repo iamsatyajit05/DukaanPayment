@@ -9,7 +9,7 @@ export default function Header() {
                 <div>
                     <span className=''>Payments</span>
                 </div>
-                <div className='flex gap-[6px]'>
+                <div className='flex gap-[6px] cursor-pointer'>
                     <HelpIcon width={14} height={14} fillColor={'#4D4D4D'} />
                     <span className='text-xs text-[#4D4D4D]'>How it works</span>
                 </div>
@@ -21,10 +21,10 @@ export default function Header() {
                 </div>
             </div>
             <div className='flex-1 flex justify-end gap-3'>
-                <div className='flex justify-center items-center w-10 h-10 bg-[#E6E6E6] rounded-full'>
+                <div className='flex justify-center items-center w-10 h-10 bg-[#E6E6E6] rounded-full cursor-pointer'>
                     <HeaderIcon1 width={20} height={20} fillColor={'#4D4D4D'} />
                 </div>
-                <div className='flex justify-center items-center w-10 h-10 bg-[#E6E6E6] rounded-full'>
+                <div className='flex justify-center items-center w-10 h-10 bg-[#E6E6E6] rounded-full cursor-pointer'>
                     <HeaderIcon2 width={20} height={12} fillColor={'#4D4D4D'} />
                 </div>
             </div>
